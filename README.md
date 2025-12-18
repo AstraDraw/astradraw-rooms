@@ -19,10 +19,10 @@ docker pull ghcr.io/astrateam-net/astradraw-room:latest
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `PORT` | Server port | `80` (prod) / `3002` (dev) |
-| `CORS_ORIGIN` | Allowed CORS origin | `*` |
+| Variable      | Description         | Default                    |
+| ------------- | ------------------- | -------------------------- |
+| `PORT`        | Server port         | `80` (prod) / `3002` (dev) |
+| `CORS_ORIGIN` | Allowed CORS origin | `*`                        |
 
 ## Development
 
