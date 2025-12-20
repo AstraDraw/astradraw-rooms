@@ -4,8 +4,7 @@ WebSocket collaboration server for [AstraDraw](https://github.com/astrateam-net/
 
 This is a fork of [excalidraw/excalidraw-room](https://github.com/excalidraw/excalidraw-room) with modifications for AstraDraw.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Docker](https://img.shields.io/badge/docker-ghcr.io-blue)](https://github.com/astrateam-net/astradraw-room/pkgs/container/astradraw-room)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Docker](https://img.shields.io/badge/docker-ghcr.io-blue)](https://github.com/astrateam-net/astradraw-room/pkgs/container/astradraw-room)
 
 ## Changes from Upstream
 
@@ -54,11 +53,11 @@ yarn fix      # Auto-fix issues
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `PORT` | Server port | `80` (prod) / `3002` (dev) |
-| `CORS_ORIGIN` | Allowed CORS origin | `*` |
-| `DEBUG` | Debug logging | - |
+| Variable      | Description         | Default                    |
+| ------------- | ------------------- | -------------------------- |
+| `PORT`        | Server port         | `80` (prod) / `3002` (dev) |
+| `CORS_ORIGIN` | Allowed CORS origin | `*`                        |
+| `DEBUG`       | Debug logging       | -                          |
 
 ## Production with PM2
 
