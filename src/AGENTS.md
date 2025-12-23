@@ -13,16 +13,16 @@ WebSocket collaboration server for real-time drawing sync.
 
 ## Two Collaboration Modes
 
-| Mode | Auth | Use Case |
-|------|------|----------|
+| Mode      | Auth         | Use Case           |
+| --------- | ------------ | ------------------ |
 | Workspace | JWT required | Team collaboration |
-| Legacy | Anonymous | Quick sharing |
+| Legacy    | Anonymous    | Quick sharing      |
 
 ## Environment Variables
 
-| Variable | Description |
-|----------|-------------|
-| `PORT` | Server port (default: 80) |
+| Variable | Description               |
+| -------- | ------------------------- |
+| `PORT`   | Server port (default: 80) |
 
 ## Build & Run
 
