@@ -4,6 +4,16 @@ All notable changes to Astradraw Room will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3] - 2025-12-24
+
+### Added
+
+- **Comment System Real-time Sync**
+  - New `comment:event` WebSocket handler for relaying comment events
+  - Supports all comment event types: thread-created, thread-resolved, thread-deleted, thread-moved, comment-added, comment-updated, comment-deleted
+  - Events are broadcast to all clients in the room except the sender
+  - Plain JSON (not encrypted) since comments are stored server-side
+
 ## [1.0.2] - 2025-12-19
 
 ### Changed

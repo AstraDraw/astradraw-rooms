@@ -12,6 +12,21 @@ type OnUserFollowedPayload = {
   action: "FOLLOW" | "UNFOLLOW";
 };
 
+// Comment system event types
+type CommentEventType =
+  | "thread-created"
+  | "thread-resolved"
+  | "thread-deleted"
+  | "comment-added"
+  | "comment-updated"
+  | "comment-deleted";
+
+type CommentEvent = {
+  type: CommentEventType;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+};
+
 const serverDebug = debug("server");
 const ioDebug = debug("io");
 const socketDebug = debug("socket");
@@ -87,6 +102,16 @@ try {
           .emit("client-broadcast", encryptedData, iv);
       },
     );
+
+    // Comment system: relay comment events to room participants
+    // Unlike element sync (encrypted), comments are plain JSON since they're
+    // already stored server-side and contain no sensitive drawing data
+    socket.on("comment:event", (roomID: string, event: CommentEvent) => {
+      socketDebug(
+        `${socket.id} sends comment event (${event.type}) to ${roomID}`,
+      );
+      socket.broadcast.to(roomID).emit("comment:event", event);
+    });
 
     socket.on("user-follow", async (payload: OnUserFollowedPayload) => {
       const roomID = `follow@${payload.userToFollow.socketId}`;
