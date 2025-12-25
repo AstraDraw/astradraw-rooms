@@ -1,39 +1,34 @@
 # Changelog
 
-All notable changes to Astradraw Room will be documented in this file.
+All notable changes to AstraDraw Room (WebSocket Server) will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.3] - 2025-12-24
-
-### Added
-
-- **Comment System Real-time Sync**
-  - New `comment:event` WebSocket handler for relaying comment events
-  - Supports all comment event types: thread-created, thread-resolved, thread-deleted, thread-moved, comment-added, comment-updated, comment-deleted
-  - Events are broadcast to all clients in the room except the sender
-  - Plain JSON (not encrypted) since comments are stored server-side
-
-## [1.0.2] - 2025-12-19
-
-### Changed
-
-- Ensured `maxHttpBufferSize` is consistently set to 200MB to support synchronized large image uploads.
-
-## [0.1.0] - 2024-12-18
-
-### Changed
-
-- Increased `maxHttpBufferSize` to 200MB to support larger file transfers during collaboration
-- Updated Node.js base image from 12 to 18 in Dockerfile
-- Changed git remote to astrateam-net/astradraw-room
+## [1.0.0] - 2025-12-25
 
 ### Added
 
-- New release workflow with GitHub Container Registry (GHCR) publishing
+**Real-time Collaboration**
+- WebSocket server for real-time scene collaboration
+- Presence indicators for connected users
+- Cursor position broadcasting
+- Scene element synchronization
+
+**Comment System**
+- Real-time comment event relay
+- Support for thread creation, resolution, deletion
+- Support for comment add, update, delete events
+- Broadcast to all room participants except sender
+
+**Infrastructure**
+- Increased `maxHttpBufferSize` to 200MB for large file transfers
 - Multi-platform Docker builds (amd64, arm64)
-- Automatic GitHub releases with changelog extraction
+- PM2 support for production clustering
 
-### Removed
+### Based On
 
-- Old Docker Hub publish workflow
+This server is forked from [excalidraw-room](https://github.com/excalidraw/excalidraw-room).
+
+**Original License:** MIT License © 2020 Excalidraw
+

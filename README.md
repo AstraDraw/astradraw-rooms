@@ -1,10 +1,12 @@
 # AstraDraw Room
 
-WebSocket collaboration server for [AstraDraw](https://github.com/astrateam-net/astradraw), a self-hosted Excalidraw deployment.
+> **Note:** Please file all issues in the [main AstraDraw repository](https://github.com/AstraDraw/astradraw/issues). This repository is for code contributions only.
+
+WebSocket collaboration server for [AstraDraw](https://github.com/AstraDraw/astradraw), a self-hosted Excalidraw deployment.
 
 This is a fork of [excalidraw/excalidraw-room](https://github.com/excalidraw/excalidraw-room) with modifications for AstraDraw.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Docker](https://img.shields.io/badge/docker-ghcr.io-blue)](https://github.com/astrateam-net/astradraw-room/pkgs/container/astradraw-room)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Docker](https://img.shields.io/badge/docker-ghcr.io-blue)](https://github.com/AstraDraw/astradraw-room/pkgs/container/astradraw-room)
 
 ## Changes from Upstream
 
@@ -17,23 +19,23 @@ This is a fork of [excalidraw/excalidraw-room](https://github.com/excalidraw/exc
 
 This is the WebSocket component of the AstraDraw suite:
 
-- **[astradraw-app](https://github.com/astrateam-net/astradraw-app)**: Frontend application
-- **[astradraw-api](https://github.com/astrateam-net/astradraw-api)**: Backend API
+- **[astradraw-app](https://github.com/AstraDraw/astradraw-app)**: Frontend application
+- **[astradraw-api](https://github.com/AstraDraw/astradraw-api)**: Backend API
 - **astradraw-room** (this repo): WebSocket collaboration server
-- **[astradraw](https://github.com/astrateam-net/astradraw)**: Deployment configuration & documentation
+- **[astradraw](https://github.com/AstraDraw/astradraw)**: Deployment configuration & documentation
 
 ## Quick Start
 
 ### Using Docker (Production)
 
 ```bash
-docker pull ghcr.io/astrateam-net/astradraw-room:latest
+docker pull ghcr.io/AstraDraw/astradraw-room:latest
 
 docker run -d \
   -p 80:80 \
   -e PORT=80 \
   -e CORS_ORIGIN=* \
-  ghcr.io/astrateam-net/astradraw-room:latest
+  ghcr.io/AstraDraw/astradraw-room:latest
 ```
 
 ### Local Development
@@ -69,7 +71,7 @@ pm2 start pm2.production.json
 
 ## Deployment
 
-For complete deployment with frontend, backend API, and Traefik proxy, see the [astradraw deployment repo](https://github.com/astrateam-net/astradraw).
+For complete deployment with frontend, backend API, and Traefik proxy, see the [astradraw deployment repo](https://github.com/AstraDraw/astradraw).
 
 ## License
 
@@ -77,8 +79,8 @@ MIT License - Based on [excalidraw-room](https://github.com/excalidraw/excalidra
 
 ## Links
 
-- **Main Repo**: [astradraw](https://github.com/astrateam-net/astradraw)
-- **Frontend App**: [astradraw-app](https://github.com/astrateam-net/astradraw-app)
-- **Backend API**: [astradraw-api](https://github.com/astrateam-net/astradraw-api)
+- **Main Repo**: [astradraw](https://github.com/AstraDraw/astradraw)
+- **Frontend App**: [astradraw-app](https://github.com/AstraDraw/astradraw-app)
+- **Backend API**: [astradraw-api](https://github.com/AstraDraw/astradraw-api)
 - **Upstream**: [excalidraw/excalidraw-room](https://github.com/excalidraw/excalidraw-room)
-- **Docker Image**: [ghcr.io/astrateam-net/astradraw-room](https://github.com/astrateam-net/astradraw-room/pkgs/container/astradraw-room)
+- **Docker Image**: [ghcr.io/AstraDraw/astradraw-room](https://github.com/AstraDraw/astradraw-room/pkgs/container/astradraw-room)
