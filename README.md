@@ -6,13 +6,13 @@ WebSocket collaboration server for [AstraDraw](https://github.com/AstraDraw/astr
 
 This is a fork of [excalidraw/excalidraw-room](https://github.com/excalidraw/excalidraw-room) with modifications for AstraDraw.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Docker](https://img.shields.io/badge/docker-ghcr.io-blue)](https://github.com/AstraDraw/astradraw-room/pkgs/container/astradraw-room)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Docker](https://img.shields.io/badge/docker-hub.docker.com-blue)](https://hub.docker.com/r/astradraw/rooms)
 
 ## Changes from Upstream
 
 - Increased `maxHttpBufferSize` to 200MB (from default 1MB) to support larger file transfers
 - Updated Node.js to v18
-- GitHub Container Registry (GHCR) publishing
+- Docker Hub publishing
 - Multi-platform Docker builds (amd64, arm64)
 
 ## Architecture
@@ -29,13 +29,13 @@ This is the WebSocket component of the AstraDraw suite:
 ### Using Docker (Production)
 
 ```bash
-docker pull ghcr.io/AstraDraw/astradraw-room:latest
+docker pull astradraw/rooms:latest
 
 docker run -d \
   -p 80:80 \
   -e PORT=80 \
   -e CORS_ORIGIN=* \
-  ghcr.io/AstraDraw/astradraw-room:latest
+  astradraw/rooms:latest
 ```
 
 ### Local Development
