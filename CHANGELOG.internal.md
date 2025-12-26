@@ -41,4 +41,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ---
 
 **Note:** This is the internal development changelog. See CHANGELOG.md for the public release history.
-
